@@ -477,10 +477,7 @@ func NewKubectlCommand(in io.Reader, out, err io.Writer) *cobra.Command {
 		Use:   "nbctl",
 		Short: i18n.T("nbctl controls the newben cluster manager"),
 		Long: templates.LongDesc(`
-      nbctl controls the newben cluster manager.
-
-      Find more information at:
-            https://kubernetes.io/docs/reference/kubectl/overview/`),
+      nbctl controls the newben cluster manager.`),
 		Run: runHelp,
 		// Hook before and after Run initialize and write profiles to disk,
 		// respectively.

@@ -38,22 +38,22 @@ import (
 var (
 	apiresourcesExample = templates.Examples(`
 		# Print the supported API Resources
-		kubectl api-resources
+		nbctl api-resources
 
 		# Print the supported API Resources with more information
-		kubectl api-resources -o wide
+		nbctl api-resources -o wide
 
 		# Print the supported API Resources sorted by a column
-		kubectl api-resources --sort-by=name
+		nbctl api-resources --sort-by=name
 
 		# Print the supported namespaced resources
-		kubectl api-resources --namespaced=true
+		nbctl api-resources --namespaced=true
 
 		# Print the supported non-namespaced resources
-		kubectl api-resources --namespaced=false
+		nbctl api-resources --namespaced=false
 
 		# Print the supported API Resources with specific APIGroup
-		kubectl api-resources --api-group=extensions`)
+		nbctl api-resources --api-group=extensions`)
 )
 
 // APIResourceOptions is the start of the data required to perform the operation.

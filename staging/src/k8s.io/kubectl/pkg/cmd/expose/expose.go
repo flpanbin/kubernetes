@@ -45,7 +45,7 @@ var (
 	exposeResources = i18n.T(`pod (po), service (svc), replicationcontroller (rc), deployment (deploy), replicaset (rs)`)
 
 	exposeLong = templates.LongDesc(i18n.T(`
-		Expose a resource as a new Kubernetes service.
+		Expose a resource as a new Service.
 
 		Looks up a deployment, service, replica set, replication controller or pod by name and uses the selector
 		for that resource as the selector for a new service on the specified port. A deployment or replica set
@@ -131,7 +131,7 @@ func NewCmdExposeService(f cmdutil.Factory, streams genericclioptions.IOStreams)
 	cmd := &cobra.Command{
 		Use:                   "expose (-f FILENAME | TYPE NAME) [--port=port] [--protocol=TCP|UDP|SCTP] [--target-port=number-or-name] [--name=name] [--external-ip=external-ip-of-service] [--type=type]",
 		DisableFlagsInUseLine: true,
-		Short:                 i18n.T("Take a replication controller, service, deployment or pod and expose it as a new Kubernetes Service"),
+		Short:                 i18n.T("Take a replication controller, service, deployment or pod and expose it as a new Service"),
 		Long:                  exposeLong,
 		Example:               exposeExample,
 		Run: func(cmd *cobra.Command, args []string) {
