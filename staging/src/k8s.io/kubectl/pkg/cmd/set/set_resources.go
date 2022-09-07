@@ -114,7 +114,7 @@ func NewCmdResources(f cmdutil.Factory, streams genericclioptions.IOStreams) *co
 		Use:                   "resources (-f FILENAME | TYPE NAME)  ([--limits=LIMITS & --requests=REQUESTS]",
 		DisableFlagsInUseLine: true,
 		Short:                 i18n.T("Update resource requests/limits on objects with pod templates"),
-		Long:                  fmt.Sprintf(resourcesLong, cmdutil.SuggestAPIResources("kubectl")),
+		Long:                  fmt.Sprintf(resourcesLong, cmdutil.SuggestAPIResources("nbctl")),
 		Example:               resourcesExample,
 		Run: func(cmd *cobra.Command, args []string) {
 			cmdutil.CheckErr(o.Complete(f, cmd, args))
