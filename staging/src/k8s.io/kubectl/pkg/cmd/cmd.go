@@ -558,8 +558,8 @@ func NewKubectlCommand(in io.Reader, out, err io.Writer) *cobra.Command {
 		{
 			Message: "Basic Commands (Intermediate):",
 			Commands: []*cobra.Command{
-				explain.NewCmdExplain("kubectl", f, ioStreams),
-				get.NewCmdGet("kubectl", f, ioStreams),
+				explain.NewCmdExplain("nbctl", f, ioStreams),
+				get.NewCmdGet("nbctl", f, ioStreams),
 				edit.NewCmdEdit(f, ioStreams),
 				delete.NewCmdDelete(f, ioStreams),
 			},
@@ -587,7 +587,7 @@ func NewKubectlCommand(in io.Reader, out, err io.Writer) *cobra.Command {
 		{
 			Message: "Troubleshooting and Debugging Commands:",
 			Commands: []*cobra.Command{
-				describe.NewCmdDescribe("kubectl", f, ioStreams),
+				describe.NewCmdDescribe("nbctl", f, ioStreams),
 				logs.NewCmdLogs(f, ioStreams),
 				attach.NewCmdAttach(f, ioStreams),
 				cmdexec.NewCmdExec(f, ioStreams),
@@ -602,7 +602,7 @@ func NewKubectlCommand(in io.Reader, out, err io.Writer) *cobra.Command {
 			Message: "Advanced Commands:",
 			Commands: []*cobra.Command{
 				diff.NewCmdDiff(f, ioStreams),
-				apply.NewCmdApply("kubectl", f, ioStreams),
+				apply.NewCmdApply("nbctl", f, ioStreams),
 				patch.NewCmdPatch(f, ioStreams),
 				replace.NewCmdReplace(f, ioStreams),
 				wait.NewCmdWait(f, ioStreams),
@@ -613,7 +613,7 @@ func NewKubectlCommand(in io.Reader, out, err io.Writer) *cobra.Command {
 			Message: "Settings Commands:",
 			Commands: []*cobra.Command{
 				label.NewCmdLabel(f, ioStreams),
-				annotate.NewCmdAnnotate("kubectl", f, ioStreams),
+				annotate.NewCmdAnnotate("nbctl", f, ioStreams),
 				completion.NewCmdCompletion(ioStreams.Out, ""),
 			},
 		},
